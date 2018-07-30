@@ -1,0 +1,17 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "project": "PHPUnit_AppAutomate",
+    "build": "phpunit-app_automate-browserstack",
+    "name": "ios_local",
+    "browserstack.debug": true,
+    "browserstack.local": true,
+    "app":"bs://<hashed app-id>"
+  },
+  "devices": [{
+    "device": "iPhone 7"
+  }]
+}

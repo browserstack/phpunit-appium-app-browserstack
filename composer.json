@@ -1,0 +1,25 @@
+{
+  "require": {
+    "browserstack/browserstack-local": "dev-master",
+    "phpunit/phpunit-selenium": "*",
+    "facebook/webdriver": "dev-community",
+    "appium/php-client": "dev-master"
+  },
+  "scripts": {
+    "android_single": "CONFIG_FILE=config/android/single.conf.json vendor/phpunit/phpunit/phpunit tests/android/single.php",
+    "ios_single": "CONFIG_FILE=config/ios/single.conf.json vendor/phpunit/phpunit/phpunit tests/ios/single.php",
+    "android_local": "CONFIG_FILE=config/android/local.conf.json vendor/phpunit/phpunit/phpunit tests/android/local.php",
+    "ios_local": "CONFIG_FILE=config/ios/local.conf.json vendor/phpunit/phpunit/phpunit tests/ios/local.php",
+    "android_parallel": "CONFIG_FILE=config/android/parallel.conf.json vendor/phpunit/phpunit/phpunit tests/android/single.php",
+    "ios_parallel": "CONFIG_FILE=config/ios/parallel.conf.json vendor/phpunit/phpunit/phpunit tests/ios/single.php"
+  },
+  "autoload": {
+    "classmap": ["lib/"]
+  },
+  "repositories:": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/appium/php-client"
+    }
+  ]
+}

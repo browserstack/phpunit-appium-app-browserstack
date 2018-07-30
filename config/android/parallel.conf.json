@@ -1,0 +1,19 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "project": "PHPUnit_AppAutomate",
+    "build": "phpunit-app_automate-browserstack",
+    "name": "android_parallel",
+    "browserstack.debug": true,
+    "app":"bs://<hashed app-id>"
+  },
+  "devices": [{
+    "device": "Samsung Galaxy S8"
+  },
+  {
+    "device": "Samsung Galaxy S8 Plus"
+  }]
+}
