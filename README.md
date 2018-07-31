@@ -12,17 +12,27 @@
 
 ## Running your tests
 * For Android
-	- For single tests run `composer android_single`
+	- Upload your Native App (.apk file) to BrowserStack servers using upload API:
+  ```
+  curl -u "username:accesskey" -X POST "https://api.browserstack.com/app-automate/upload" -F "file=@/path/to/app/file/Application-debug.apk"
+  ```
+  - If you do not have an .apk file and looking to simply try App Automate, [you can download our sample app and upload](https://www.browserstack.com/app-automate/sample-apps/android/WikipediaSample.apk)
+to the BrowserStack servers using the above API.
+  - For single tests run `composer android_single`
 	- For local tests run `composer android_local`
-	- For parallel tests
-		- In `parallel.php` change `$run_cmd` to `composer android_parallel` 
-		- `php parallel.php`
+	- For parallel tests `php tests/android/parallel.php`
 * For IOS
+	- Upload your Native App (.ipa file) to BrowserStack servers using upload API:
+
+  ```
+  curl -u "username:accesskey" -X POST "https://api.browserstack.com/app-automate/upload" -F "file=@/path/to/app/file/Application-debug.ipa"
+  ```
+
+	- If you do not have an .ipa file and looking to simply try App Automate, [you can download our sample app and upload](https://www.browserstack.com/app-automate/sample-apps/ios/BStackSampleApp.ipa)
+to the BrowserStack servers using the above API.
 	- For single tests run `composer ios_single`
 	- For local tests run `composer ios_local`
-	- For parallel tests
-		- In `parallel.php` change `$run_cmd` to `composer ios_parallel` 
-		- `php parallel.php` 
+	- For parallel tests `php tests/ios/parallel.php` 
 
 ## Notes
 * You can view your test results on the [BrowserStack App Automate dashboard](https://www.browserstack.com/app-automate)
