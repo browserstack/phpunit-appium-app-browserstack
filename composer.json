@@ -1,7 +1,7 @@
 {
   "require": {
     "browserstack/browserstack-local": "dev-master",
-    "phpunit/phpunit-selenium": "*",
+    "phpunit/phpunit-selenium": "dev-master",
     "facebook/webdriver": "dev-community",
     "appium/php-client": "dev-master"
   },
